@@ -1,0 +1,242 @@
+$pale-blue: hsl(225, 100%, 94%);
+$bright-blue: hsl(245, 75%, 52%);
+
+$very-pale-blue: hsl(225, 100%, 98%);
+$desatureated-blue: hsl(224, 23%, 55%);
+$dark-blue: hsl(223, 47%, 23%);
+
+$red-hat-display: "Red Hat Display", sans-serif;
+
+body {
+  background-color: $pale-blue;
+}
+
+.background {
+  display: none;
+}
+
+svg {
+  display: none;
+}
+
+.card {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 20px;
+
+  & .card-header {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+
+    & .image-header {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: inherit;
+    }
+  }
+
+  & .card-body {
+    font-family: $red-hat-display;
+    display: flex;
+    flex-direction: column;
+    padding: 25px 25px 18px 25px;
+
+    & .title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: 800;
+      color: $dark-blue;
+    }
+
+    & .desc {
+      text-align: center;
+      font-size: 16px;
+      font-weight: 500;
+      color: $desatureated-blue;
+      line-height: 24px;
+      margin: 20px 0;
+      padding: 8px;
+    }
+
+    & .annual-plan {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 18px;
+      background-color: $very-pale-blue;
+      margin-bottom: 25px;
+      border-radius: 10px;
+
+      & .price-container {
+        flex-grow: 1;
+        line-height: 24px;
+
+        & .price-title {
+          font-size: 16px;
+          font-weight: 700;
+          color: $dark-blue;
+        }
+
+        & .price {
+          font-size: 16px;
+          color: $desatureated-blue;
+        }
+      }
+
+      & .change {
+        font-size: 16px;
+        font-weight: 700;
+        color: $bright-blue;
+
+        &:hover {
+          cursor: pointer;
+          text-decoration: none;
+          color: lighten($color: $bright-blue, $amount: 10%);
+        }
+      }
+    }
+
+    & .submit-button {
+      font-family: $red-hat-display;
+      border: none;
+      background-color: $bright-blue;
+      padding: 15px;
+      color: white;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      border-radius: 10px;
+      box-shadow: 0px 20px 30px -10px hsla(245, 75%, 52%, 0.4);
+
+      &:hover {
+        cursor: pointer;
+        background-color: lighten($color: $bright-blue, $amount: 10%);
+      }
+    }
+
+    & .cancel-button {
+      font-family: $red-hat-display;
+      background-color: transparent;
+      border: none;
+      padding: 15px;
+      font-size: 16px;
+      font-weight: 700;
+      color: $desatureated-blue;
+      box-shadow: 0px 35px 112px -30px rgba(0, 0, 0, 0.58);
+
+      &:hover {
+        cursor: pointer;
+        color: $dark-blue;
+      }
+    }
+  }
+}
+
+.attribution {
+  font-family: $red-hat-display;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+
+  a {
+    text-decoration: none;
+  }
+}
+
+@media only screen and (max-width: 374px) {
+  .card {
+    width: 90%;
+
+    & .card-body {
+      & .annual-plan {
+        flex-wrap: wrap;
+        padding: 5%;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  svg {
+    display: block;
+  }
+
+  .background {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: darken($color: $pale-blue, $amount: 3%);
+  }
+
+  .card {
+    width: 450px;
+    gap: 0px;
+
+    & .card-body {
+      padding: 42px 42px 28px 42px;
+
+      & .title {
+        font-weight: 900;
+        font-size: 26px;
+      }
+
+      & .desc {
+        font-size: 16px;
+        margin: 12px 0;
+      }
+
+      & .annual-plan {
+        padding: 20px;
+        margin-bottom: 25px;
+      }
+
+      & .submit-button {
+        margin-bottom: 15px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-height: 666px) {
+  .card {
+    width: 350px;
+    height: 500px;
+    gap: 0px;
+
+    & .card-body {
+      padding: 25px 25px 28px 25px;
+
+      & .title {
+        font-weight: 900;
+        font-size: 20px;
+      }
+
+      & .desc {
+        margin: 7px 0;
+      }
+
+      & .annual-plan {
+        padding: 12px;
+        margin-bottom: 10px;
+      }
+
+      & .submit-button {
+        padding: 8px;
+        margin-bottom: 10px;
+      }
+
+      & .cancel-button {
+        padding: 8px;
+      }
+    }
+  }
+}

@@ -1,0 +1,200 @@
+body {
+  background-color: hsl(225, 100%, 94%);
+}
+
+.background {
+  display: none;
+}
+
+svg {
+  display: none;
+}
+
+.card {
+  width: 330px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 20px;
+}
+.card .card-header {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+}
+.card .card-header .image-header {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: inherit;
+}
+.card .card-body {
+  font-family: "Red Hat Display", sans-serif;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 25px 18px 25px;
+}
+.card .card-body .title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 800;
+  color: hsl(223, 47%, 23%);
+}
+.card .card-body .desc {
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: hsl(224, 23%, 55%);
+  line-height: 24px;
+  margin: 20px 0;
+  padding: 8px;
+}
+.card .card-body .annual-plan {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px;
+  background-color: hsl(225, 100%, 98%);
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+.card .card-body .annual-plan .price-container {
+  flex-grow: 1;
+  line-height: 24px;
+}
+.card .card-body .annual-plan .price-container .price-title {
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(223, 47%, 23%);
+}
+.card .card-body .annual-plan .price-container .price {
+  font-size: 16px;
+  color: hsl(224, 23%, 55%);
+}
+.card .card-body .annual-plan .change {
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(245, 75%, 52%);
+}
+.card .card-body .annual-plan .change:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: #6255e7;
+}
+.card .card-body .submit-button {
+  font-family: "Red Hat Display", sans-serif;
+  border: none;
+  background-color: hsl(245, 75%, 52%);
+  padding: 15px;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  box-shadow: 0px 20px 30px -10px hsla(245, 75%, 52%, 0.4);
+}
+.card .card-body .submit-button:hover {
+  cursor: pointer;
+  background-color: #6255e7;
+}
+.card .card-body .cancel-button {
+  font-family: "Red Hat Display", sans-serif;
+  background-color: transparent;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 700;
+  color: hsl(224, 23%, 55%);
+  box-shadow: 0px 35px 112px -30px rgba(0, 0, 0, 0.58);
+}
+.card .card-body .cancel-button:hover {
+  cursor: pointer;
+  color: hsl(223, 47%, 23%);
+}
+
+.attribution {
+  font-family: "Red Hat Display", sans-serif;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.attribution a {
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 374px) {
+  .card {
+    width: 90%;
+  }
+  .card .card-body .annual-plan {
+    flex-wrap: wrap;
+    padding: 5%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  svg {
+    display: block;
+  }
+  .background {
+    display: block;
+    width: 100%;
+    height: 100px;
+    background-color: #d1ddff;
+  }
+  .card {
+    width: 450px;
+    gap: 0px;
+  }
+  .card .card-body {
+    padding: 42px 42px 28px 42px;
+  }
+  .card .card-body .title {
+    font-weight: 900;
+    font-size: 26px;
+  }
+  .card .card-body .desc {
+    font-size: 16px;
+    margin: 12px 0;
+  }
+  .card .card-body .annual-plan {
+    padding: 20px;
+    margin-bottom: 25px;
+  }
+  .card .card-body .submit-button {
+    margin-bottom: 15px;
+  }
+}
+@media only screen and (max-height: 666px) {
+  .card {
+    width: 350px;
+    height: 500px;
+    gap: 0px;
+  }
+  .card .card-body {
+    padding: 25px 25px 28px 25px;
+  }
+  .card .card-body .title {
+    font-weight: 900;
+    font-size: 20px;
+  }
+  .card .card-body .desc {
+    margin: 7px 0;
+  }
+  .card .card-body .annual-plan {
+    padding: 12px;
+    margin-bottom: 10px;
+  }
+  .card .card-body .submit-button {
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  .card .card-body .cancel-button {
+    padding: 8px;
+  }
+}/*# sourceMappingURL=style.css.map */
