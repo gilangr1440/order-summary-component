@@ -28,8 +28,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [here](https://your-solution-url.com)
-- Live Site URL: [here](https://your-live-site-url.com)
+- Solution URL: [here](https://www.frontendmentor.io/solutions/order-summary-component-ZvntCb9AmV)
+- Live Site URL: [here](https://gilangr1440.github.io/order-summary-component/)
 
 ## My process
 

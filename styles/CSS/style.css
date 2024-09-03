@@ -21,6 +21,7 @@ svg {
   transform: translate(-50%, -50%);
   background-color: white;
   border-radius: 20px;
+  box-shadow: 0px 23px 45px -22px hsla(224, 23%, 55%, 0.554);
 }
 .card .card-header {
   width: 100%;
